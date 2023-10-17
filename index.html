@@ -3,10 +3,28 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>code quiz challenge</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    
+    <div id="openingScreen">
+        <div id="timer">time: 75</div>
+        <a id="highScores" aria-current="page" href="#">View high scores</a>
+        <h1>Coding Quiz Challenge</h1>
+        <p>
+            Try to answer the following code-related questions within the time limit.
+            Keep in mind that incorrect answers will penalize your score/time by ten seconds.
+        </p>
+        <button id="startQuizBtn">Start Quiz</button>
+    </div>
+    <div id="quizScreen">
+        <h1 id="question1">Commonly used data types DO Not Include:</h1>
+        <button id="answerButton">1. strings</button>
+        <button id="answerButton">2. booleans</button>
+        <button id="answerButton">3. alerts</button>
+        <button id="answerButton">4. numbers</button>
+
+    </div>
+    <script src="script.js"></script>
 </body>
 </html>
