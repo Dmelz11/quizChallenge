@@ -1,13 +1,115 @@
-*,
-*::before,
-*::after {
-    box-sizing: border-box;
+*  {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
-html,
-body{
+.quiz
+.scores {
+    margin: 50px auto 0 auto;
+    max-width: 400px;
+}
+.quiz-container {
+    display: flex;
+    border: 3px solid;
+    border-radius: 5px;
+    position: absolute;
+    margin-top: 2px;
+    margin-bottom: 100px;
+    margin-left: 400px;
+    margin-right: 20px;
+    height: 400px;
+    width: 80%;
+    transform: translate(-50%, -50%);
+    padding: 10px;
+}
+h1 {
+    
     text-align: center;
-    border-radius: 3px solid black;
-    background-color: white;
-    color: black;
+    margin-top: 80px;
+    margin-left: 100px;
+    margin-right: 100px;
+
+}
+
+p {
+    text-align: center;
+    margin-top: 20px;
+    margin-left: 90px;
+    margin-right: 90px;
+
+}
+.landing {
+    text-align: center;
+}
+#view-high-scores {
+    position: absolute;
+    color: rgb(195, 43, 212);
+    top: 30px;
+    left: 15px;
+}
+.timer {
+    position: absolute;
+    top: 15px;
+    right: -75px;
+}
+.button {
+    display: inline-block;
+    margin-top: 20px;
+    margin-left: 20px;
+    cursor: pointer;
+    color: #fff;
+    background-color: rgb(85, 37, 85);
+    border-radius: 4px;
+    padding: 20px;
+}
+button:hover {
+    background-color: rgb(192, 34, 147);
+}
+#startBtn {
+    position: absolute;
+    display: block;
+    margin-left: 300px;
+    align-items: center;
+}
+input [type="text"] {
+    font-size: 100%;
+}
+.hide {
+    display: none;
+}
+.feedback {
+    font-style: italic;
+    font-size: 100%;
+    margin-top: 300px;
+    margin-left:200px;
+    margin-right: 200px;
+    padding-top: 15px;
+    color: gray;
+
+}
+ol {
+    padding-left: 15px;
+    max-height: 600px;
+    overflow: auto;
+}
+li {
+    padding: 5px;
+    list-style: decimal inside none;
+}
+li :nth-child(odd) {
+    background-color:#dfdae7;
+}
+@media screen and (max-width: 768px) {
+    .quiz-container {
+        width: 80%;
+    }
     
 }
+@media screen and(max-width: 575px) {
+    .quiz-container {
+        width: 90%;
+    }
+    .quiz,
+    .scores {
+        max-width: 90%;
+    }
+}
+
