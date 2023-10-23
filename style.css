@@ -6,19 +6,32 @@
     margin: 50px auto 0 auto;
     max-width: 400px;
 }
+a {
+    text-decoration: none;
+}
+/*this needs more work, margins are not working right!*/
 .quiz-container {
-    display: flex;
+    position: absolute;
     border: 3px solid;
     border-radius: 5px;
-    position: absolute;
-    margin-top: 2px;
-    margin-bottom: 100px;
-    margin-left: 400px;
-    margin-right: 20px;
+    margin-top: 5px;
     height: 400px;
-    width: 80%;
-    transform: translate(-50%, -50%);
+    width: 768px;
+    margin-bottom: 75px;
     padding: 10px;
+}
+.answerBtn {
+
+    display: flex;
+    flex-direction: column;
+    margin: 3px;
+    margin-left: 175px;
+    text-align: center;
+    cursor: pointer;
+    color: #efefef;
+    background-color: rgb(60, 7, 60);
+    border-radius: 4px;
+    padding: 15px;   
 }
 h1 {
     
@@ -32,53 +45,53 @@ h1 {
 p {
     text-align: center;
     margin-top: 20px;
-    margin-left: 90px;
-    margin-right: 90px;
+    margin-left: 110px;
+    margin-right: 110px;
 
 }
 .landing {
     text-align: center;
+    align-items: center;
 }
 #view-high-scores {
     position: absolute;
     color: rgb(195, 43, 212);
-    top: 30px;
+    top: 15px;
     left: 15px;
 }
+
 .timer {
     position: absolute;
     top: 15px;
-    right: -75px;
+    right: 15px;
 }
-.button {
-    display: inline-block;
-    margin-top: 20px;
-    margin-left: 20px;
+
+#start {
+    position: absolute;
+    text-align: center;
+    margin-left: 325px;
     cursor: pointer;
-    color: #fff;
-    background-color: rgb(85, 37, 85);
+    color: #efefef;
+    background-color: rgb(60, 7, 60);
     border-radius: 4px;
-    padding: 20px;
+    padding: 15px;
 }
+/* hover effect is happening:)*/
 button:hover {
     background-color: rgb(192, 34, 147);
 }
-#startBtn {
-    position: absolute;
-    display: block;
-    margin-left: 300px;
-    align-items: center;
-}
+
 input [type="text"] {
     font-size: 100%;
 }
+/* I haven't been able to see this work yet do to some bugs in JavaScript*/
 .hide {
     display: none;
 }
 .feedback {
     font-style: italic;
     font-size: 100%;
-    margin-top: 300px;
+    margin-top: 100px;
     margin-left:200px;
     margin-right: 200px;
     padding-top: 15px;
@@ -96,20 +109,5 @@ li {
 }
 li :nth-child(odd) {
     background-color:#dfdae7;
-}
-@media screen and (max-width: 768px) {
-    .quiz-container {
-        width: 80%;
-    }
-    
-}
-@media screen and(max-width: 575px) {
-    .quiz-container {
-        width: 90%;
-    }
-    .quiz,
-    .scores {
-        max-width: 90%;
-    }
 }
 

@@ -6,23 +6,26 @@
         answersEl ["1. strings","2. booleans","3. alerts","4.numbers"],
 
         correctAnswer ;'3. alerts'
-    },
-
+    }
+//Buggy situation here today, 
+//tried Dev inspect tools but not really working yet
    {
-       prompt  "The condition in an if/else statement is enclosed with___________.",
+       prompt:  "The condition in an if/else statement is enclosed with___________.",
 
        answersEl ["1. quotes", "2. curly brackets", "3. parenthesis", "4. square brackets"],
 
        correctAnswer ;"3. parenthesis",
-   },
-
+   }
+//I originally thought to run these as a boolean type loop?
+//It still seems like a possible solution to get the correct
+//answers.
    {
        prompt: "Arrays in JavaScript can be used to store___________.",
 
        answersEl ["1. numbers and strings", "2. other arrays", "3. booleans", "4. all of the above"],
 
        correctAnswer ;"4. allof the above",
-  },
+  }
 
   {
       prompt: "String values must be enclosed within__________when being assigned to variables",
@@ -30,7 +33,7 @@
       answersEl ["1. commas", "2. curley brackets", "3. quotes", "4. parethesis"],
 
       correctAnswer ;"3. quotes",
-  },
+  }
 
   {
       prompt: "A very useful tool used during development and debugging for printing content to th debugger is:",
@@ -38,14 +41,14 @@
       answersEl ["1. JavaScript", "2. terminal/bash", "3. for loops", "4. console.log"],
 
       correctAnswer ;"4. console.log",
-  },
+  }
 
 
 let questionsEl = document.querySelector("#questions");
 let timerEl = document.querySelector("#timer");
 let answersEl = document.querySelector("#answers");
 let submitBtn = document.querySelector("#submit-score");
-let startBtn = document.querySelector("#start");
+var startBtn = document.getElementById("#startBtn");
 let initialsEl = document.querySelector("#initials");
 let feedbackEl = document.querySelector("#feedback");
 let restartBtn = document.querySelector("#restart");
@@ -54,7 +57,8 @@ let currentQuestionIndex = 0;
 let time = questionsEl.length * 15;
 let timerId;
 var timer=75;
-
+//The dreaded countdown timer. I had it working well at one 
+//point....those were the days, I'll get this.
 function quizStart ( timerId = setInterval(clockTick, 1000);
 );
 
@@ -79,7 +83,9 @@ function getQuestion(){
             answersEl.appendChild(answerBtn);
     });
 }
-
+startBtn.addEventListener("click", function(){
+    timerInterval = setInterval(updateTimer, 1000);
+});
 
 function questionClick() {
     if (this.value !== questions[currentQuestionIndex].answer) {
@@ -115,12 +121,14 @@ function quizEnd() {
     questionsEl.setAttribute("class","hide");
 }
 
-function clockTick() {
+function startQuiz() {
     time--;
     timerEl.textContent = time;
     if (time <= 0) {
         quizEnd();
     }
+ // JSON.parse and stringify for the local storage retrieval
+ //very cool stuff. 
 }
     function saveHighscore () {
         let initials = initialsEl.value.trim();

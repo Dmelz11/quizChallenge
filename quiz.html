@@ -1,25 +1,36 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Quiz-page</title> 
-        
-        <script src="./highScore.js"></script>
-        <link rel="stylesheet" type="text/css" href="style.css">  
-    </head>
-    <body>
-        <div class="scores">
-            <h1>Highscores</h1>
-            <ol id="highscores"></ol>
-            <a href="index.html">
-                <button>
-                    Restart
-                </button>
-            </a>
-            <button id="clear">
-              Clear Highscores  
-            </button>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>code quiz challenge</title>
+    <link rel="stylesheet" type="text/css" href="style.css">    
+</head>
+<body>
+    <div id="quiz-container">
+        <header>
+            <div>
+                <a href="highscore.html">
+                    <div id="view-high-scores">
+                        View high scores   
+                    </div>
+                </a>
+            </div> 
+            <div class="timer">
+                Time: 75
+                 </span>
+              </div>   
+        </header>
+        <main class="quiz-page1"></main> 
+            <h1 class="question-text">Commonly used data types DO Not Include:</h1>
+               <div id="answers">
+                   <a href="answer1.html" >
+                    <button class="answerBtn">1. strings</button>
+                    <button class="answerBtn">2. booleans</button>
+                    <button class="answerBtn">3. alerts</button>
+                    <button class="answerBtn">4. numbers</button>
+                   </a>
         </div>
-    </body>
-</html>
+    </div>
+    <script src="./script.js"></script>
+</body>
